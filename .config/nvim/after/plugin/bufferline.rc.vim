@@ -1,20 +1,25 @@
 nnoremap <Tab> :BufferLineCycleNext<CR>
-nnoremap <S-Tab>b] :BufferLineCyclePrev<CR>
+nnoremap <S-Tab> :BufferLineCyclePrev<CR>
 
 lua << EOF
-require("bufferline").setup{
+local function diagnostics_indicator(_, _, diagnostics)
+  local symbols = {error = ' ', warn = ' ', hint = ' ', info = ' '}
+  local result = {}
+  for name, count in pairs(diagnostics) do
+    if symbols[name] and count > 0 then
+      table.insert(result, symbols[name] .. count)
+    end
+  end
+  result = table.concat(result, ' ')
+  return #result > 0 and result or ''
+end
+
+require('bufferline').setup {
   options = {
-    diagnostics = "nvim_lsp",
-    diagnostics_indicator = function(count, level, diagnostics_dict, context)
-      local s = " "
-      for e, n in pairs(diagnostics_dict) do
-        local sym = e == "error" and " "
-          or (e == "warning" and " " )
-        s = s .. n .. sym
-      end
-      return s
-    end,
-    separator_style = "slant"
+    separator_style = 'slant',
+    diagnostics = 'nvim_lsp',
+    diagnostics_indicator = diagnostics_indicator,
+    diagnostics_update_in_insert = false
   }
 }
 EOF

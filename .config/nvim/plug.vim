@@ -20,6 +20,7 @@ call plug#begin()
     Plug 'hrsh7th/nvim-cmp'
     Plug 'neovim/nvim-lspconfig'
     Plug 'tami5/lspsaga.nvim'
+    Plug 'folke/lsp-colors.nvim'
 
     Plug 'L3MON4D3/LuaSnip'
     Plug 'nvim-lua/popup.nvim'
@@ -28,12 +29,25 @@ call plug#begin()
 
     " colorschemes
     Plug 'rose-pine/neovim'
-
+    Plug 'EdenEast/nightfox.nvim'
 
     "vim-closetag
     Plug 'windwp/nvim-ts-autotag'
     Plug 'windwp/nvim-autopairs'
 
     "tabs
-    Plug 'akinsho/bufferline.nvim'
+    "Plug 'akinsho/bufferline.nvim'
+    Plug 'romgrk/barbar.nvim'
+
+    "which-key
+    Plug 'folke/which-key.nvim'
+
+    "autosave
+    Plug 'Pocco81/AutoSave.nvim'
+
+    "tabline
+    Plug 'lukas-reineke/indent-blankline.nvim'
+
+    "Prettier
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 call plug#end()

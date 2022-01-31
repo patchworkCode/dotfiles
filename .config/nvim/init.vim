@@ -8,6 +8,7 @@ scriptencoding utf-8
 " stop loading config if it's on tiny or small
 if !1 | finish | endif
 
+set mouse+=a
 set nocompatible
 set number
 syntax enable
@@ -137,7 +138,7 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set background=dark
   " Use NeoSolarized
-  colorscheme rose-pine
+  colorscheme nightfox
 endif
 
 "}}}

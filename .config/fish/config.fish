@@ -1,5 +1,5 @@
 set fish_greeting ""
-
+set fish_vi_key_bindings
 set -gx TERM xterm-256color
 
 # theme
@@ -15,7 +15,9 @@ alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
 alias g git
+alias ... "cd ../../"
 command -qv nvim && alias vim nvim
+command -qv nvim && alias v nvim
 
 set -gx EDITOR nvim
 
@@ -53,3 +55,5 @@ set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
+
+thefuck --alias | source 

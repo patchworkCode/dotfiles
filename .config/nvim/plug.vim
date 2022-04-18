@@ -3,7 +3,7 @@ if has("nvim")
 endif
 
 call plug#begin()
-    Plug 'tpope/vim-fugitive'
+    Plug 'lewis6991/gitsigns.nvim'
     Plug 'hoob3rt/lualine.nvim'
     Plug 'kyazdani42/nvim-web-devicons'
     "Telescope 
@@ -28,8 +28,12 @@ call plug#begin()
     Plug 'onsails/lspkind-nvim'
 
     " colorschemes
-    Plug 'rose-pine/neovim'
-    Plug 'EdenEast/nightfox.nvim'
+    Plug 'cocopon/iceberg.vim'
+    Plug 'gkeep/iceberg-dark'
+    Plug 'marko-cerovac/material.nvim'
+    Plug 'glepnir/zephyr-nvim'
+    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+    Plug 'tiagovla/tokyodark.nvim'
 
     "vim-closetag
     Plug 'windwp/nvim-ts-autotag'
@@ -50,4 +54,18 @@ call plug#begin()
 
     "Prettier
     Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+
+    "terminal
+    Plug 'akinsho/toggleterm.nvim'
+
+    "DAP
+    Plug 'mfussenegger/nvim-dap'
+    Plug 'Pocco81/DAPInstall.nvim'
+    Plug 'rcarriga/nvim-dap-ui'
+
+    "nvim-tree 
+    Plug 'kyazdani42/nvim-tree.lua'
+
+    "Rust-tools
+    Plug 'simrat39/rust-tools.nvim'
 call plug#end()

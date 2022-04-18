@@ -17,7 +17,10 @@ require'nvim-treesitter.configs'.setup {
     "swift",
     "html",
     "scss",
-    "javascript"
+    "javascript",
+    "python",
+    "rust",
+    "latex"
   },
   autotag = {
     enable = true,

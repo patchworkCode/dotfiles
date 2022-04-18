@@ -107,6 +107,19 @@ nvim_lsp.cssls.setup {
   root_dir = function() return vim.loop.cwd() end      -- run lsp for javascript in any directory
 }
 
+nvim_lsp.pyright.setup{}
+
+nvim_lsp.texlab.setup{
+  filetypes = {"plaintex", "tex", "bib"},
+  settings = {
+    texlab = {
+      build = {
+        executable = "tectonic",
+        args = { "-X","compile","%f","--synctex","--keep-logs","--keep-intermediates"},
+      }
+    }
+  }
+}
 
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

@@ -28,7 +28,7 @@ vnoremap <silent> # :<C-U>
 nmap te :tabedit<Return> 
 "nmap <S-Tab> :tabprev<Return>
 "nmap <Tab> :tabnext<Return>
-nmap tt :terminal<Return>
+"nmap tt :terminal<Return>
 "------------------------------
 " Windows
 

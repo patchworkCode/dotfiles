@@ -1,5 +1,0 @@
-vim.api.nvim_set_keymap('n', '<leader>dct', '<cmd>lua require"dap".continue()<CR>',{ noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>dsv', '<cmd>lua require"dap".step_over()<CR>',{ noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>dsi', '<cmd>lua require"dap".step_into()<CR>',{ noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>dso', '<cmd>lua require"dap".step_out()<CR>',{ noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>dtb', '<cmd>lua require"dap".toggle_breakpoint()<CR>',{ noremap = true })

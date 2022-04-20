@@ -20,7 +20,6 @@ call plug#begin()
     Plug 'hrsh7th/nvim-cmp'
     Plug 'neovim/nvim-lspconfig'
     Plug 'tami5/lspsaga.nvim'
-    Plug 'folke/lsp-colors.nvim'
 
     Plug 'L3MON4D3/LuaSnip'
     Plug 'nvim-lua/popup.nvim'
@@ -28,10 +27,7 @@ call plug#begin()
     Plug 'onsails/lspkind-nvim'
 
     " colorschemes
-    Plug 'cocopon/iceberg.vim'
-    Plug 'gkeep/iceberg-dark'
-    Plug 'marko-cerovac/material.nvim'
-    Plug 'glepnir/zephyr-nvim'
+    Plug 'catppuccin/nvim', {'as': 'catppuccin'}
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
     Plug 'tiagovla/tokyodark.nvim'
 
@@ -57,11 +53,6 @@ call plug#begin()
 
     "terminal
     Plug 'akinsho/toggleterm.nvim'
-
-    "DAP
-    Plug 'mfussenegger/nvim-dap'
-    Plug 'Pocco81/DAPInstall.nvim'
-    Plug 'rcarriga/nvim-dap-ui'
 
     "nvim-tree 
     Plug 'kyazdani42/nvim-tree.lua'

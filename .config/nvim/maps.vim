@@ -24,11 +24,7 @@ vnoremap <silent> # :<C-U>
 "-----------------------------
 " Tabs
 
-" Open current directory
 nmap te :tabedit<Return> 
-"nmap <S-Tab> :tabprev<Return>
-"nmap <Tab> :tabnext<Return>
-"nmap tt :terminal<Return>
 "------------------------------
 " Windows
 
